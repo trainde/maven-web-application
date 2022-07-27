@@ -33,19 +33,21 @@ node
         sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@3.88.179.168:/opt/apache-tomcat-9.0.65/webapps/"
     }
     }
-}// node closing
    }
-catch (e){
+   catch (e){
     CurrentBuild.result = "FAILURE"
     throw e
         }
 finally{
     slackNotification (CurrentBuild.result) 
        }
-}
+
+}// node closing
+   
+
 
 def slackNotification(String buildStatus = 'STARTED') {
-  // build status of null means successful
+  
   buildStatus =  buildStatus ?: 'SUCCESS'
 
   // Default values
