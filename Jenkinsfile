@@ -2,7 +2,7 @@ node
 {
     def mavenHome = tool name: "maven3.8.6"
     properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '2', numToKeepStr: '2')), pipelineTriggers([pollSCM('* * * * *')])])
-    echo "The branch name is : ${env BRANCH_NAME}"
+    echo "The branch name is : ${env.BRANCH_NAME}"
     
     stage('CheckoutCode'){
     git branch: 'development', credentialsId: '79c91c23-1539-45cc-9145-14ea9a699d20', url: 'https://github.com/trainde/maven-web-application.git'
