@@ -36,11 +36,11 @@ node
     }
    }
    catch (e){
-    CurrentBuild.result = "FAILURE"
+    currentBuild.result = "FAILURE"
     throw e
         }
 finally{
-    slackNotification (CurrentBuild.result) 
+    slackNotification (currentBuild.result) 
        }
 
 }// node closing
