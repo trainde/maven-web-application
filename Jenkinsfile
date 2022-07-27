@@ -8,6 +8,7 @@ node
     echo "The path to the workspace is : ${env.WORKSPACE}"
     
    try{  
+       slackNotification("STARTED")
     stage('CheckoutCode'){
     git branch: 'development', credentialsId: '79c91c23-1539-45cc-9145-14ea9a699d20', url: 'https://github.com/trainde/maven-web-application.git'
     }
