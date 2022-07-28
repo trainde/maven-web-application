@@ -1,0 +1,20 @@
+pipeline{
+
+agent any
+
+stages{
+
+  //Getting the code from GitHub Repo
+  stage('CheckoutCode'){
+  steps{
+  
+  git branch: 'development', credentialsId: '79c91c23-1539-45cc-9145-14ea9a699d20', url: 'https://github.com/trainde/maven-web-application.git'
+       } 
+      } 
+  //After getting coe doing the build using maven
+  stage('Build'){
+  steps{
+   sh "mvn clean package"
+     }
+     }
+     } 
