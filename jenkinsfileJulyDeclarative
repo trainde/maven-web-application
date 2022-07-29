@@ -15,9 +15,7 @@ options{
 //It will add timestamps to the output
 timestamps()
 //Discard Old Build.. Keep only last 5 Build with artifcats
-buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')
-
-}
+buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')}
 
 triggers{
 //Poll SCM
