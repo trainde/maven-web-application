@@ -60,5 +60,25 @@ stages{
     }
    }
    }
-} //pipeline clossed  
-}//Stages Closing
+   
+} //stages clossed
+
+post{
+ success{
+ mail bcc: '', body: '''Build Over - Success..
+
+ Regards,
+ Mithun Software Solutions,
+ 9980923226''', cc: 'devopstrainingblr@gmail.com', from: '', replyTo: '', subject: 'Build over!...', to: 'devopstrainingblr@gmail.com'
+ }
+ 
+ failure{
+ mail bcc: '', body: '''Build Over - Failure..
+
+ Regards,
+ Mithun Software Solutions,
+ 9980923226''', cc: 'devopstrainingblr@gmail.com', from: '', replyTo: '', subject: 'Build over!...', to: 'devopstrainingblr@gmail.com'
+ }
+
+}
+}//pipeline Closing
