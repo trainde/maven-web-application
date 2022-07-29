@@ -5,6 +5,16 @@ agent any
 tools{
 maven 'maven3.8.6'
 }
+
+triggers{
+//Poll SCM
+pollSCM('* * * * *')
+//BuildPeriodically
+cron('* * * * *')
+//GitHub WebHook
+githubPush()
+}
+
 stages{
 
   //Getting the code from GitHub Repo
