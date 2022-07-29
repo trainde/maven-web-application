@@ -10,7 +10,6 @@ options{
 //It will add timestamps to the output
 timestamps()
 }
-      }
 
 triggers{
 //Poll SCM
