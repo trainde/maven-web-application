@@ -9,7 +9,6 @@ maven 'maven3.8.6'
 options{
 //It will add timestamps to the output
 timestamps()
-buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '2', numToKeepStr: '2')
 }
 
 triggers{
