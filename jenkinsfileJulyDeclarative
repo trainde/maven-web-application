@@ -10,7 +10,6 @@ options{
 timestamps()
 buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')
 }
-
 stages{
 
   //Getting the code from GitHub Repo
