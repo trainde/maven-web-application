@@ -5,7 +5,10 @@ agent any
 tools{
 maven 'maven3.8.6'
 }
-options{([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '2', numToKeepStr: '2')), pipelineTriggers([pollSCM('* * * * *')])])
+
+options{
+timestamps()
+buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')
 }
 
 stages{
