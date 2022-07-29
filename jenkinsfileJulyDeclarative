@@ -1,30 +1,9 @@
 pipeline{
 
 agent any
-/*
-agent{
-label 'NodeName'
-}
-*/
 
 tools{
 maven 'maven3.8.3'
-}
-
-options{
-//It will add timestamps to the output
-timestamps()
-//Discard Old Build.. Keep only last 5 Build with artifcats
-buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')
-}
-
-triggers{
-//Poll SCM
-pollSCM('* * * * *')
-//BuildPeriodically
-cron('* * * * *')
-//GitHub WebHook
-githubPush()
 }
 
 stages{
@@ -69,24 +48,3 @@ stages{
   }
   
 }//Stages Closing
-
-post{
- success{
- mail bcc: '', body: '''Build Over - Success..
-
- Regards,
- Mithun Software Solutions,
- 9980923226''', cc: 'devopstrainingblr@gmail.com', from: '', replyTo: '', subject: 'Build over!...', to: 'devopstrainingblr@gmail.com'
- }
- 
- failure{
- mail bcc: '', body: '''Build Over - Failure..
-
- Regards,
- Mithun Software Solutions,
- 9980923226''', cc: 'devopstrainingblr@gmail.com', from: '', replyTo: '', subject: 'Build over!...', to: 'devopstrainingblr@gmail.com'
- }
-
-}
-
-}//Pipeline closing
