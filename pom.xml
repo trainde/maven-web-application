@@ -21,7 +21,7 @@
 		<spring.version>5.1.2.RELEASE</spring.version>
 		<junit.version>4.11</junit.version>
 		<log4j.version>1.2.17</log4j.version>
-		<sonar.host.url>http://54.242.123.163:9000/</sonar.host.url>
+		<sonar.host.url>http://54.90.219.115:9000/</sonar.host.url>
                 <sonar.login>b3a77de7319db4e705539a31cf0d33dd54e30f94</sonar.login>
 		
              
@@ -99,13 +99,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Mithun Technologies Releases Nexus Repository</name>
-	      <url>http://54.167.69.208:8081/repository/maven-releases/</url>
+	      <url>http://54.197.28.238:8081/repository/maven-releases/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Mithun Technologies Snapshot Nexus Repository </name>
-	      <url>http://54.167.69.208:8081/repository/maven-snapshots/</url>
+	      <url>http://54.197.28.238:8081/repository/maven-snapshots/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
